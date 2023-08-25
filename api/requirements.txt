@@ -5,3 +5,4 @@ sqlalchemy
 mysqlclient
 alembic
 pytest
+httpx
