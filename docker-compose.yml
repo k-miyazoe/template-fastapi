@@ -1,0 +1,17 @@
+version: "3"
+services:
+  api:
+    tty: true
+    stdin_open: true
+    restart: always
+    build: ./api
+    ports:
+      - '8005:8005'
+    image: fastapi-template:v1.0
+    container_name: fastapi
+    volumes:
+      - ./api/src:/app
+    env_file:
+      - .env
+
+
