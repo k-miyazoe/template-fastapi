@@ -6,14 +6,12 @@ services:
     restart: always
     build:
       context: ./api
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.prod
     ports:
-      - '8005:8005'
-    image: fastapi-template:v1.0
+      - '8006:8006'
+    image: fastapi-template-prod:v1.0
     container_name: fastapi
-    volumes:
-      - ./api/src:/app
     env_file:
-      - ./api/dev.env
+      - ./api/prod.env
 
 
