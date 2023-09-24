@@ -3,7 +3,12 @@ from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 from typing import Union
 
-app = FastAPI()
+app = FastAPI(
+    title="api title(need to change)",
+    description="Initial Template FastAPI.",
+    version="1.0",
+)
+
 load_dotenv()
 
 origins = [
