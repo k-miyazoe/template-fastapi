@@ -1,13 +1,12 @@
 # template-fastapi
-
+This is fastapi's template repository. Can work in docker environment
 **docker**
 ```
 docker compose build
 docker compose up -d
 ```
 
-**fastapi**
-[Interactive API documentation]
+**Interactive API documentation**
 (http://localhost:8005/docs#/default)
 
 **test**
