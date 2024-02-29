@@ -6,3 +6,4 @@ mysqlclient
 alembic
 pytest
 httpx
+alembic
