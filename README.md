@@ -1,7 +1,9 @@
 # template-fastapi
+
 This is fastapi's template repository. Can work in docker environment
 
 **docker**
+
 ```
 docker compose build
 docker compose up -d
@@ -12,7 +14,17 @@ docker compose up -d
 (http://localhost:8005/docs#/default)
 
 **test**
+
 ```
 docker compose exec -it api /bin/bash
 pytest
+```
+
+**Alembic**
+
+```
+alembic revision --autogenerate -m "<change details>"
+alembic upgrade head
+alembic current
+alembic history
 ```
