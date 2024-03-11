@@ -21,14 +21,12 @@ class TestUserTable(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(30), nullable=False)
     email = Column(String(128), nullable=False)
-    status = Column(Boolean, nullable=False)
 
 
 class TestUser(BaseModel):
     id: int
     name: str
     email: str
-    status: bool
 
 
 def main():
