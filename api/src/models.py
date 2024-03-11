@@ -4,18 +4,6 @@ from db import Base
 from db import ENGINE
 
 
-class Word(Base):
-    __tablename__ = "words"
-    id = Column(Integer, primary_key=True, index=True)
-    word = Column(String(30), index=True)
-    tag = Column(String(30), index=True)
-
-
-class WordModel(BaseModel):
-    word: str
-    tag: str
-
-
 class TestUserTable(Base):
     __tablename__ = 'test_user'
     id = Column(Integer, primary_key=True, autoincrement=True)
