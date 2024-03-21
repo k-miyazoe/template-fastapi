@@ -4,6 +4,8 @@ from dotenv import load_dotenv
 from typing import Union
 from db import session
 from models import TestUserTable, TestUser
+import asyncio
+
 
 app = FastAPI(
     title="api title(need to change)",
@@ -120,3 +122,12 @@ def put_users(user: TestUser, user_id: int):
     session.commit()
     session.close()
 
+#　非同期処理サンプル
+async def async_task():
+    await asyncio.sleep(3)  # 3秒間の非同期処理をシミュレート
+    return {"message": "Async task completed"}
+
+@app.get("/async_task")
+async def run_async_task():
+    result = await async_task()
+    return result
