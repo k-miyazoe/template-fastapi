@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from sample_parameter import router as sample_parameter_router
 from sample_db_operation import router as sample_db_operation_router
 from sample_async import router as sample_async_router
+from sample_machine_learning import router as sample_machine_learning_router
 
 
 app = FastAPI(
@@ -33,6 +34,6 @@ async def root():
 app.include_router(sample_parameter_router)
 app.include_router(sample_db_operation_router)
 app.include_router(sample_async_router)
-
+app.include_router(sample_machine_learning_router)
 
 
